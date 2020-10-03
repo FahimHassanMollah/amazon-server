@@ -8,10 +8,10 @@ app.use(bodyParser());
 const port = 8080
 const MongoClient = require('mongodb').MongoClient;
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.jrzhf.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
-// console.log(process.env.DB_USER);
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// })
+console.log(process.env.DB_USER);
+app.get('/', (req, res) => {
+  res.send('Hello is is working!')
+})
 
 
 
